@@ -7,16 +7,14 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-#undef org_apache_hadoop_net_unix_DomainSocket_STATUS_CLOSED_MASK
-#define org_apache_hadoop_net_unix_DomainSocket_STATUS_CLOSED_MASK 1073741824L
-#undef org_apache_hadoop_net_unix_DomainSocket_SND_BUF_SIZE
-#define org_apache_hadoop_net_unix_DomainSocket_SND_BUF_SIZE 1L
-#undef org_apache_hadoop_net_unix_DomainSocket_RCV_BUF_SIZE
-#define org_apache_hadoop_net_unix_DomainSocket_RCV_BUF_SIZE 2L
-#undef org_apache_hadoop_net_unix_DomainSocket_SND_TIMEO
-#define org_apache_hadoop_net_unix_DomainSocket_SND_TIMEO 3L
-#undef org_apache_hadoop_net_unix_DomainSocket_RCV_TIMEO
-#define org_apache_hadoop_net_unix_DomainSocket_RCV_TIMEO 4L
+#undef org_apache_hadoop_net_unix_DomainSocket_SEND_BUFFER_SIZE
+#define org_apache_hadoop_net_unix_DomainSocket_SEND_BUFFER_SIZE 1L
+#undef org_apache_hadoop_net_unix_DomainSocket_RECEIVE_BUFFER_SIZE
+#define org_apache_hadoop_net_unix_DomainSocket_RECEIVE_BUFFER_SIZE 2L
+#undef org_apache_hadoop_net_unix_DomainSocket_SEND_TIMEOUT
+#define org_apache_hadoop_net_unix_DomainSocket_SEND_TIMEOUT 3L
+#undef org_apache_hadoop_net_unix_DomainSocket_RECEIVE_TIMEOUT
+#define org_apache_hadoop_net_unix_DomainSocket_RECEIVE_TIMEOUT 4L
 /*
  * Class:     org_apache_hadoop_net_unix_DomainSocket
  * Method:    anchorNative
@@ -40,6 +38,14 @@ JNIEXPORT void JNICALL Java_org_apache_hadoop_net_unix_DomainSocket_validateSock
  */
 JNIEXPORT jint JNICALL Java_org_apache_hadoop_net_unix_DomainSocket_bind0
   (JNIEnv *, jclass, jstring);
+
+/*
+ * Class:     org_apache_hadoop_net_unix_DomainSocket
+ * Method:    socketpair0
+ * Signature: ()[I
+ */
+JNIEXPORT jintArray JNICALL Java_org_apache_hadoop_net_unix_DomainSocket_socketpair0
+  (JNIEnv *, jclass);
 
 /*
  * Class:     org_apache_hadoop_net_unix_DomainSocket

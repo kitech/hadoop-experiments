@@ -73,6 +73,14 @@ JNIEXPORT void JNICALL Java_org_apache_hadoop_io_compress_zlib_ZlibCompressor_re
 JNIEXPORT void JNICALL Java_org_apache_hadoop_io_compress_zlib_ZlibCompressor_end
   (JNIEnv *, jclass, jlong);
 
+/*
+ * Class:     org_apache_hadoop_io_compress_zlib_ZlibCompressor
+ * Method:    getLibraryName
+ * Signature: ()Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_org_apache_hadoop_io_compress_zlib_ZlibCompressor_getLibraryName
+  (JNIEnv *, jclass);
+
 #ifdef __cplusplus
 }
 #endif

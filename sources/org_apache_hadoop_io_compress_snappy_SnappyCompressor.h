@@ -25,6 +25,14 @@ JNIEXPORT void JNICALL Java_org_apache_hadoop_io_compress_snappy_SnappyCompresso
 JNIEXPORT jint JNICALL Java_org_apache_hadoop_io_compress_snappy_SnappyCompressor_compressBytesDirect
   (JNIEnv *, jobject);
 
+/*
+ * Class:     org_apache_hadoop_io_compress_snappy_SnappyCompressor
+ * Method:    getLibraryName
+ * Signature: ()Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_org_apache_hadoop_io_compress_snappy_SnappyCompressor_getLibraryName
+  (JNIEnv *, jclass);
+
 #ifdef __cplusplus
 }
 #endif

@@ -25,6 +25,22 @@ JNIEXPORT void JNICALL Java_org_apache_hadoop_io_compress_lz4_Lz4Compressor_init
 JNIEXPORT jint JNICALL Java_org_apache_hadoop_io_compress_lz4_Lz4Compressor_compressBytesDirect
   (JNIEnv *, jobject);
 
+/*
+ * Class:     org_apache_hadoop_io_compress_lz4_Lz4Compressor
+ * Method:    compressBytesDirectHC
+ * Signature: ()I
+ */
+JNIEXPORT jint JNICALL Java_org_apache_hadoop_io_compress_lz4_Lz4Compressor_compressBytesDirectHC
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     org_apache_hadoop_io_compress_lz4_Lz4Compressor
+ * Method:    getLibraryName
+ * Signature: ()Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_org_apache_hadoop_io_compress_lz4_Lz4Compressor_getLibraryName
+  (JNIEnv *, jclass);
+
 #ifdef __cplusplus
 }
 #endif

@@ -9,11 +9,19 @@ extern "C" {
 #endif
 /*
  * Class:     org_apache_hadoop_security_JniBasedUnixGroupsMapping
- * Method:    getGroupForUser
+ * Method:    anchorNative
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_org_apache_hadoop_security_JniBasedUnixGroupsMapping_anchorNative
+  (JNIEnv *, jclass);
+
+/*
+ * Class:     org_apache_hadoop_security_JniBasedUnixGroupsMapping
+ * Method:    getGroupsForUser
  * Signature: (Ljava/lang/String;)[Ljava/lang/String;
  */
-JNIEXPORT jobjectArray JNICALL Java_org_apache_hadoop_security_JniBasedUnixGroupsMapping_getGroupForUser
-  (JNIEnv *, jobject, jstring);
+JNIEXPORT jobjectArray JNICALL Java_org_apache_hadoop_security_JniBasedUnixGroupsMapping_getGroupsForUser
+  (JNIEnv *, jclass, jstring);
 
 #ifdef __cplusplus
 }
